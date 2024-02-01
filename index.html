@@ -1,8 +1,34 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    TEST
-
-
-    
-  </body>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body>
+		<header id="divHaut" class="divHaut">
+			Bienvenue
+		</header>
+		<nav id="divNav" class="divNav">
+			<ul>
+				<li><a href="accueil.htm"	class="lienNav" target="iFrameArticle">Accueil</a></li>
+				<li><a href="cv.pdf"			class="lienNav" target="iFrameArticle">C.V.</a></li>
+				<li><a href="mailto:lovmy@wanadoo.fr"	class="lienNav" target="iFrameArticle">Contact</a></li>
+			</ul>
+			<a href="#divNav" class="ouvrir"><h1>&rsaquo;</h1></a>
+			<a href="#divNav_clos" class="fermer"><h1>&lsaquo;</h1></a>
+		</nav>
+		<nav id="divGaucheHaut" class="divGaucheHaut">
+			<ul>
+				<li><a href="accueil.htm"	class="lien" target="iFrameArticle">Accueil</a></li>
+				<li><a href="cv.pdf"			class="lien" target="iFrameArticle">C.V.</a></li>
+				<li><a href="mailto:lovmy@wanadoo.fr"	class="lien" target="iFrameArticle">Contact</a></li>
+			</ul>
+		</nav>
+		<article id="divDroitBas" class="divDroitBas">
+			<iframe name="iFrameArticle" frameborder="0" style="width: 100%;height: 100%;" src="accueil.htm"></iframe>
+		</article>
+		<footer id="divBas" class="divBas">
+			&copy;2023 Serge Banaszak
+		</footer>
+	</body>
 </html>
