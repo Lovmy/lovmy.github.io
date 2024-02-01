@@ -1,0 +1,386 @@
+@charset "UTF-8";
+
+:root {
+ 	--couleur_texte: blue;
+ 	--couleur_fond: white;
+ 	--couleur_bouton_texte: white;
+ 	--couleur_bouton_fond: blue;
+ 	--couleur_entete_texte: white;
+ 	--couleur_entete_fond: blue;
+}
+
+/* #		-> Trouve l'element par son id		*/
+/* .		-> Trouve l'element par sa classe	*/
+/* Sans rien	-> Trouve l'element par son tag	XML	*/
+
+body {
+	overflow:hidden;
+	font-size: 1.5vw;
+	color: var(--couleur_texte);
+	background-color: var(--couleur_fond);
+}
+
+hr {
+	border-top: 1px solid var(--couleur_texte);
+}
+
+li {
+	margin: 20px;
+}
+
+p {
+	font-size: 2vw;
+}
+
+/* header */
+.divHaut {
+	width: 100%;
+	height: 4vh;
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	border-radius: 10px;
+	padding-left: 4px;
+	padding-right: 4px;
+	box-sizing: border-box;
+	text-align: center;
+	z-index: 1;
+}
+
+/* nav */
+.divNav {
+	height: 88vh;
+	width: 378px;
+	margin: 0px;
+	padding: 10px;
+	color: var(--couleur_entete_texte);
+	background-color: var(--couleur_entete_fond);
+	border: 1px solid var(--couleur_entete_texte);
+	border-top-left-radius: 0px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 0px;
+	opacity: 0.8;
+	position: absolute;
+	left: -400px;
+	-webkit-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+	z-index: 2;
+	visibility: hidden;
+}
+.divNav a.ouvrir,
+.divNav a.fermer {
+	padding: 10px 5px;
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	border-top-left-radius: 0px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 0px;
+	text-decoration: none;
+	position: absolute;
+	right: -31px;
+	top: 30px;
+	width: 20px;
+}
+.divNav:target {
+	left: 0px;
+}
+.divNav a.fermer {
+	display: none;
+}
+.divNav_clos:target #volet {
+	left: -400px;
+}
+.divNav:target a.ouvrir {
+	display: none;
+}
+.divNav:target a.fermer {
+	display: block;
+}
+
+.divContenaire {
+	width: 100%;
+	height: 88vh;
+	background-color: var(--couleur_fond);
+	border: 0px solid var(--couleur_texte);
+	float: left;
+	border-radius: 10px;
+	margin: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+.divLogin {
+	width: 30%;
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	border-radius: 10px;
+	margin-top: 20vh;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 2;
+}
+
+ /* nav */
+.divGaucheHaut {
+	width: 19%;
+	height: 88vh;
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	float: left;
+	border-radius: 10px;
+	margin: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+ /* article */
+.divDroitBas {
+	width: 80%;
+	height: 88vh;
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	text-align: center;
+	float: right;
+	border-radius: 10px;
+	margin: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+/* footer */
+.divBas {
+	width: 100%;
+	height: 4vh;
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	float: left;
+	border-radius: 10px;
+	padding-left: 4px;
+	padding-right: 4px;
+	box-sizing: border-box;
+	text-align: left;
+	z-index: 1;
+}
+
+/* a href */
+.lien {
+	color: var(--couleur_texte);
+	background-color: var(--couleur_fond);
+	border: 2px solid var(--couleur_fond);
+	border-radius: 5%;
+	font-size: 1.6vw;
+	text-decoration: none;
+}
+
+/* a href dans le menu */
+.lienNav {
+	color: var(--couleur_fond);
+	background-color: var(--couleur_texte);
+	border: 2px solid var(--couleur_texte);
+	border-radius: 5%;
+	font-size: 1.6vw;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Les elements du formulaire */
+
+.selection {
+	color: var(--couleur_texte);
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	border-radius: 2px;
+	font-size: 1.4vw;
+}
+
+input[type="button"] {
+	color: var(--couleur_bouton_texte);
+	background-color: var(--couleur_bouton_fond);
+	border: 2px solid var(--couleur_bouton_fond);
+	border-radius: 5%;
+	font-size: 1.6vw;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+input[type="button"]:hover
+{
+	color: var(--couleur_bouton_fond);
+	background-color: var(--couleur_bouton_texte);
+}
+
+input[type="button"]:active
+{
+	color: var(--couleur_bouton_fond);
+	background-color: var(--couleur_bouton_texte);
+}
+
+input[type="checkbox"] {
+	color: var(--couleur_texte);
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	border-radius: 2px;
+	font-size: 1.4vw;
+	width: 1.5vw;
+	height: 1.5vw;
+}
+
+input[type="checkbox"]:before {
+	background-color:green;
+}
+
+input[type="radio"] {
+	color: var(--couleur_texte);
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	font-size: 1.4vw;
+	width: 1.5vw;
+	height: 1.5vw;
+}
+
+input[type="text"] {
+	color: var(--couleur_texte);
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	border-radius: 2px;
+	width: 100%;
+	height: 2vw;
+	font-size: 1.4vw;
+}
+
+input[type="password"] {
+	color: var(--couleur_texte);
+	background-color: var(--couleur_fond);
+	border: 1px solid var(--couleur_texte);
+	border-radius: 2px;
+	width: 100%;
+	height: 2vw;
+	font-size: 1.4vw;
+}
+
+input[type="submit"] {
+	color: var(--couleur_bouton_texte);
+	background-color: var(--couleur_bouton_fond);
+	border: 2px solid var(--couleur_bouton_fond);
+	border-radius: 5%;
+	font-size: 1.6vw;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+.bouton {
+	color: var(--couleur_bouton_texte);
+	background-color: var(--couleur_bouton_fond);
+	border: 2px solid var(--couleur_bouton_fond);
+	border-radius: 5%;
+	font-size: 1.6vw;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* @media screen and (max-width: 1024px) { */
+@media (orientation: portrait) {
+	
+	body {
+		font-size: 4vw;
+	}
+
+	p {
+		font-size: 4vw;
+	}
+
+	li {
+		margin: 50px;
+	}
+	
+	.selection {
+		font-size: 4vw;
+	}
+	
+	.divGaucheHaut {
+		width: 0%;
+		height: 0vh;
+		float: left;
+		clear: both;
+		visibility: hidden;
+	}
+
+	.divDroitBas {
+		width: 100%;
+		height: 89vh;
+		float: left;
+		clear: both;
+	}
+	
+	.lien {
+		font-size: 4vw;
+	}
+
+	.bouton {
+		font-size: 4vw;
+	}
+
+	/* Les elements du formulaire */
+	input[type="button"] {
+		font-size: 4vw;
+		background-size: 110px 110px;
+	}
+
+	input[type="button"]:hover {
+		font-size: 4vw;
+	}
+	
+	input[type="checkbox"] {
+		background-color: var(--couleur_fonc);
+		color: var(--couleur_texte);
+		font-size: 4vw;
+		width: 4vw;
+    		height: 4vw;
+	}
+	input[type="radio"] {
+		background-color: var(--couleur_fond);
+		color: var(--couleur_texte);
+		font-size: 4vw;
+		width: 4vw;
+    		height: 4vw;
+	}
+	input[type="text"] {
+		font-size: 4vw;
+		height: 4vw;
+	}
+	input[type="password"] {
+		font-size: 4vw;
+		height: 4vw;
+	}
+	
+	.divNav {
+		height: 89vh;
+		width: 578px;
+		left: -600px;
+		visibility: visible;
+	}
+
+	.divNav_clos:target #volet {
+		left: -600px;
+	}
+
+	.divNav a.ouvrir,
+	.divNav a.fermer {
+		right: -51px;
+		top: 30px;
+		width: 40px;
+	}
+
+	.lienNav {
+		font-size: 8vw;
+	}
+}
+		
